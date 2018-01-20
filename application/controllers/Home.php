@@ -5,8 +5,14 @@
 	{
 		function index()
 		{
+			// Get my info
 			$this->load->model('Me_model');
 			$this->data['me'] = $this->Me_model->get_info(1);
+
+			// Get posts
+			$input = array('limit' => array(11,0));
+			$this->load->model('Post_model');
+			$this->data['posts'] = $this->Post_model->get_list($input);
 
 			$this->load->view('site/layout', $this->data);
 		}
@@ -24,7 +30,7 @@
 
 					$data = array(
 						'content' => $content,
-						'created' => time()
+						'created' => date('Y-m-d h:i:s')
 					);
 
 					$this->load->model('Ask_model');
@@ -39,6 +45,11 @@
 			}
 
 			redirect(base_url());
+		}
+
+		function load_more()
+		{
+			echo "Huynv2909";
 		}
 	}
  ?>

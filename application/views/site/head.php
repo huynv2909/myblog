@@ -16,7 +16,7 @@
     <title>Huy's Blog - Chia sẻ cá nhân</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo public_url(); ?>images/favicon/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo public_url(); ?>images/favicon/fav-icon.ico">
     <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="<?php echo public_url(); ?>images/favicon/apple-touch-icon.png">
     
     <!-- All CSS Plugins -->

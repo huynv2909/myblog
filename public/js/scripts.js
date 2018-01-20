@@ -162,16 +162,29 @@
 	   
 	   
        /* Load More Post */	
+       // load 11, display 5, step 3 and using js effect
 	   	
-        $("div.blog-post").slice(0, 4).show();
+        $("div.blog-post").slice(0, 5).show();
+          var count_post = 5;
           $("#load-more-post").on('click', function (e) {
              e.preventDefault();
-             $("div.blog-post:hidden").slice(0, 1).slideDown(300);
+             $("div.blog-post:hidden").slice(0, 3).slideDown(300);
+             count_post += 3;
+             // Load more by ajax
+             
              if ($("div.blog-post:hidden").length == 0) {
-             $('#post-end-message').html('<div class="end">End</div>').fadeIn(800);
-             $("#load-more-post").fadeOut(100);
+                // not allow double load
+                $("#load-more-post").fadeOut();
+                console.log(count_post);
               }
-             });
+
+
+             // If end
+             if ($("div.blog-post:hidden").length == 0) {
+               $('#post-end-message').html('<div class="end">End</div>').fadeIn(800);
+               $("#load-more-post").fadeOut(100);
+              }
+          });
 			 
 
 

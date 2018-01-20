@@ -11,9 +11,9 @@
 	    <div id="main">
 	        <div class="container">
 	            <div class="row">
-	            	<?php $this->load->view('site/left', $this->data); ?>
+	            	<?php $this->load->view('site/left', $me); ?>
 	            	<div class="col-md-9">
-		            	<?php $this->load->view('site/main'); ?>
+		            	<?php $this->load->view('site/main', $posts); ?>
 		            	<?php $this->load->view('site/footer'); ?>
 	            	</div>
 	            </div>

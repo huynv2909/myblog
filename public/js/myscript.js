@@ -14,7 +14,7 @@ $(document)
         else this.rows = minRows + 6;
     });
 
-
+// textbox Sent ask to me
 $(document).ready(function(){
     $('.autoExpand').focus(function() {
         $(this).css("box-shadow", "0px 0px 5px 2px #1abc9c");
