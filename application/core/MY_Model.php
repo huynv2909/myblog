@@ -147,6 +147,18 @@
 			return $query->num_rows();
 		}
 
+		function get_random_records($quantity, $field = '')
+		{
+			if ($field) {
+				$this->db->select($field);
+			}
+
+			$this->db->order_by('rand()');
+			$this->db->limit($quantity);
+			$query = $this->db->get($this->table);
+			return $query->result();
+		}
+
 		// set input
 		protected function get_list_set_input($input)
 		{

@@ -29,7 +29,14 @@
 			$this->load->model('Me_model');
 			$this->data['me'] = $this->Me_model->get_info(1);
 
-			$this->data['title'] = 'Em owi em dangd lamf gif vaayj';
+			// Get post
+			$this->load->model('Post_model');
+			$post = $this->Post_model->get_info($post_id);
+			$this->data['post'] = $post;
+			$this->data['title'] = $post->title;
+
+			$field = array('id', 'title');
+			$this->data['random_posts'] = $this->get_random_posts($post_id, 4, $field);
 
 			// Set
 			$this->data['highlight'] = 1;
@@ -109,6 +116,23 @@
 			}
 
 			redirect(base_url());
+		}
+
+		private function get_random_posts($id, $quantity, $field)
+		{
+			$this->load->model('Post_model');
+
+			do {
+				$flag = true;
+				$result = $this->Post_model->get_random_records($quantity, $field);
+				foreach ($result as $post) {
+					if ($post->id == $id) {
+						$flag = false;
+					}
+				}
+			} while (!$flag);
+
+			return $result;
 		}
 	}
  ?>
