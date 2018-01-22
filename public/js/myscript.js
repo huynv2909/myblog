@@ -57,4 +57,39 @@ $(document).ready(function(){
             }
         });
     })
+
+    // I will update !
+    $("#sub-form").submit(function(event){
+        event.preventDefault();
+
+        var email = $("#email").val();
+
+        if ($.trim(email) == "") {
+            $("#notify-oh-js").fadeIn();
+            setTimeout(function(){
+                $("#notify-oh-js").fadeOut();
+            }, 5000);
+
+            $("#email").focus();
+            return false;
+        }
+
+        var url = $(this).attr("action");
+
+        $.ajax({
+            url : url,
+            type : 'post',
+            data : {
+                email : email
+            },
+            success : function(result) {
+                $("#email").val('');
+
+                $("#notify-thanks-js").fadeIn();
+                setTimeout(function(){
+                    $("#notify-thanks-js").fadeOut();
+                }, 5000);
+            }
+        });
+    })
 });

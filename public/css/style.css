@@ -139,20 +139,20 @@ button {
     margin-top: 5px;
 }
 
-#notify-errors {
+#notify-errors, #notify-oh {
     color: red;
 }
 
-#notify-success {
+#notify-success, #notify-thanks {
     color: green;
 }
 
-#notify-errors-js {
+#notify-errors-js, #notify-oh-js {
     color: red;
     display: none;
 }
 
-#notify-success-js {
+#notify-success-js, #notify-thanks-js {
     color: green;
     display: none;
 }
@@ -180,7 +180,7 @@ button {
 }
 
 #main {
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .main-color {

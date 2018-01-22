@@ -13,7 +13,7 @@
     <meta name="robots" content="index,follow">
     
     
-    <title>Huy's Blog - Chia sẻ cá nhân</title>
+    <title><?php echo $title; ?></title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo public_url(); ?>images/favicon/fav-icon.ico">
@@ -27,6 +27,10 @@
     
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+
+    <?php if ($highlight) {
+        $this->load->view('site/import/syntaxhighlighterCSS');
+    }?>
     
     
     <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
@@ -44,6 +48,10 @@
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="<?php echo public_url(); ?>js/scripts.js"></script>
     <script type="text/javascript" src="<?php echo public_url(); ?>js/myscript.js"></script>
+
+    <?php if ($highlight) {
+        $this->load->view('site/import/syntaxhighlighterJS');
+    }?>
     
 
 </head>

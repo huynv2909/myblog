@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<?php $this->load->view('site/head'); ?>
+	<?php $this->load->view('site/head', $this->data); ?>
 	<body>
 		<!-- Preloader Start -->
      	<!-- <div class="preloader">
@@ -13,7 +13,7 @@
 	            <div class="row">
 	            	<?php $this->load->view('site/left', $me); ?>
 	            	<div class="col-md-9">
-		            	<?php $this->load->view('site/main', $posts); ?>
+		            	<?php $this->load->view($temp, $this->data); ?>
 		            	<?php $this->load->view('site/footer'); ?>
 	            	</div>
 	            </div>
