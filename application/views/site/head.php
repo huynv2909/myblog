@@ -7,7 +7,7 @@
     
     <!-- SEO -->
     <meta name="description" content="150 words">
-    <meta name="author" content="uipasta">
+    <meta name="author" content="huynv">
     <meta name="url" content="http://www.yourdomainname.com">
     <meta name="copyright" content="company name">
     <meta name="robots" content="index,follow">
