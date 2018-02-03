@@ -159,6 +159,11 @@
 			return $query->result();
 		}
 
+		function get_insert_id()
+		{
+			return $this->db->insert_id();
+		}
+
 		// set input
 		protected function get_list_set_input($input)
 		{

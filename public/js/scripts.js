@@ -178,14 +178,12 @@
                   type: 'post',
                   dataType: 'text',
                   data: {
-                    index: count_post,
-                    limit: 3
+                    index: count_post
                   },
                   success: function(result) {
-                    console.log(result);
                     $('#load-but').before(result);
                     if (!result.trim()) {
-                      $('#post-end-message').html('<div class="end">End</div>').fadeIn(800);
+                      $('#post-end-message').html('<div class="end">End</div>').fadeIn();
                       $("#load-more-post").fadeOut();
                     }
                   }
@@ -198,13 +196,6 @@
                 });
                 
               }
-
-
-             // If end
-             // if ($("div.blog-post:hidden").length == 0) {
-             //   $('#post-end-message').html('<div class="end">End</div>').fadeIn(800);
-             //   $("#load-more-post").fadeOut();
-             //  }
           });
 			 
 

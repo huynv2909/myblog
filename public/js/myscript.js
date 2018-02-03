@@ -92,4 +92,86 @@ $(document).ready(function(){
             }
         });
     })
+
+    // Load more comment
+    var count_cmt = 0;
+        
+    $("div.comment").slice(0, 5).show();
+      $("#load-more-cmt").on('click', function (e) {
+        count_cmt = $("div.comment:visible").length;
+         e.preventDefault();
+         $("div.comment:hidden").slice(0, 3).slideDown(300);
+         count_cmt += 3;
+         // Load more by ajax
+         
+         if ($("div.comment:hidden").length == 0) {
+            $.ajax({
+              url: $(this).attr('href'),
+              type: 'post',
+              dataType: 'text',
+              data: {
+                post: $(this).data('post'),
+                index: count_cmt
+              },
+              success: function(result) {
+                $('#more-cmt').before(result);
+                if (!result.trim()) {
+                  $('#cmt-end-message').html('<div class="end">End</div>').fadeIn();
+                  $("#load-more-cmt").fadeOut();
+                }
+              }
+            })
+            .done(function() {
+              console.log("success");
+            })
+            .fail(function() {
+              console.log("error");
+            });
+            
+          }
+      });
+
+    // Comment
+    $("#cmt-form").submit(function(event){
+        event.preventDefault();
+
+        var cmt = $("#cmt").val();
+
+        if ($.trim(cmt) == "") {
+            $("#notify-empty-js").fadeIn();
+            setTimeout(function(){
+                $("#notify-empty-js").fadeOut();
+            }, 5000);
+
+            $("#cmt").focus();
+            return false;
+        }
+
+        count_cmt++;
+
+        var url = $(this).attr("action");
+
+        $.ajax({
+            url : url,
+            type : 'post',
+            data : {
+                post : $(this).data('post'),
+                comment : cmt
+            },
+            beforeSend : function() {
+                $('#submit-cmt').attr('disabled', true);
+            },
+            success : function(result) {
+                $('#cmt-list').prepend(result);
+                $("div.comment").slice(0, 1).show();
+                $('html,body').animate({
+                    scrollTop: $('#comment').offset().top
+                }, 1000);
+                $("#cmt").val('');
+            },
+            complete: function() {
+                $('#submit-cmt').removeAttr('disabled');
+            }
+        });
+    })
 });

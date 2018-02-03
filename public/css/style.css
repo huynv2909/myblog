@@ -105,62 +105,6 @@ button {
     outline: 0;
 }
 
-.autoExpand {
-    width: 100%;
-  display:block;
-  /* overflow:hidden; */
-
-  padding:10px;
-  font-size:14px;
-  border-radius:6px;
-  box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
-  border:0;
-}
-
-.my-btn {
-    margin: 10px auto;
-    display: block;
-    padding: 2px 35px;
-    border-radius: 5px;
-    border: 1px solid #1abc9c;
-    background: white;
-    color: #1abc9c;
-    font-weight: bold;
-}
-
-.my-btn:hover {
-    background: #1abc9c;
-    color: white;
-}
-
-.notify {    
-    font-size: 12px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin-top: 5px;
-}
-
-#notify-errors, #notify-oh {
-    color: red;
-}
-
-#notify-success, #notify-thanks {
-    color: green;
-}
-
-#notify-errors-js, #notify-oh-js {
-    color: red;
-    display: none;
-}
-
-#notify-success-js, #notify-thanks-js {
-    color: green;
-    display: none;
-}
-
-.notify span {
-    padding-left: 5px;
-}
-
 ::-webkit-scrollbar
 {
     width: 10px;  /* for vertical scrollbars */
@@ -948,8 +892,6 @@ blockquote {
 
 /* Comment */
 
-.comment {
-}
 
 .comment h3 {
     font-size: 25px;
@@ -1087,7 +1029,7 @@ blockquote {
 /* Footer */
 
 .footer {
-    background: url(../images/bg/pattern-bg.png);
+    background: url(https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/images/bg/pattern-bg.png);
     background-repeat: repeat;
     text-align: center;
     padding: 30px 0;
@@ -1885,4 +1827,87 @@ blockquote {
 
 .uipasta-credit a:hover {
     color: #333333;
+}
+
+/* My style customize*/
+
+.autoExpand {
+    width: 100%;
+  display:block;
+  /* overflow:hidden; */
+
+  padding:10px;
+  font-size:14px;
+  border-radius:6px;
+  box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+  border:0;
+}
+
+.avatar i {
+    font-size: 30px;
+    display: block;
+    margin-top: 15px;
+}
+
+.cmt-content {
+    font-size: 16px !important;
+    font-family: Verdana, sans-serif !important;
+    color: black !important;
+}
+
+.cmt-date {
+    font-size: 8px !important;
+}
+
+.my-btn {
+    margin: 10px auto;
+    display: block;
+    padding: 2px 35px;
+    border-radius: 5px;
+    border: 1px solid #1abc9c;
+    background: white;
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+.my-btn:hover {
+    background: #1abc9c;
+    color: white;
+}
+
+.notify {    
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top: 5px;
+}
+
+#notify-errors, #notify-oh {
+    color: red;
+}
+
+#notify-success, #notify-thanks {
+    color: green;
+}
+
+#notify-errors-js, #notify-oh-js, #notify-empty-js {
+    color: red;
+    display: none;
+}
+
+#notify-success-js, #notify-thanks-js {
+    color: green;
+    display: none;
+}
+
+.notify span {
+    padding-left: 5px;
+}
+
+#comment textarea {
+    margin-top: 60px;
+}
+
+.comment {
+    margin: 30px 0;
+    display: none;
 }

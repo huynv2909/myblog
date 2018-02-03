@@ -13,7 +13,10 @@
 	            <div class="row">
 	            	<?php $this->load->view('site/left', $me); ?>
 	            	<div class="col-md-9">
-		            	<?php $this->load->view($temp, $this->data); ?>
+	            		<div class="col-md-12 page-body">
+		            		<?php $this->load->view($temp, $this->data); ?>
+		            		<?php $this->load->view('site/subscribe'); ?>
+		            	</div>
 		            	<?php $this->load->view('site/footer'); ?>
 	            	</div>
 	            </div>
