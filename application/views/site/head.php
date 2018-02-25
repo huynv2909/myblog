@@ -16,11 +16,11 @@
     <title><?php echo $title; ?></title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/images/favicon/fav-icon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="https://s3-ap-southeast-1.amazonaws.com/huysblog/images/favicon/fav-icon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="https://s3-ap-southeast-1.amazonaws.com/huysblog/images/favicon/apple-touch-icon.png">
     
     <!-- All CSS Plugins -->
-    <link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/css/plugin.css">
+    <link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/huysblog/css/plugin.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,6 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
     <!-- Main CSS Stylesheet -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="<?php echo public_url('css/style.css'); ?>">
     
     <!-- Google Web Fonts  -->
@@ -53,13 +52,11 @@
     <!-- All Javascript Plugins  -->
     <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/js/plugin.js"></script>
+    <script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/huysblog/js/plugin.js"></script>
 
     <!-- Main Javascript File  -->
-    <!-- <script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/js/myscript.js"></script> -->
     <script type="text/javascript" src="<?php echo public_url('js/myscript.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo public_url('js/scripts.js'); ?>"></script>
-    <!-- <script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/huynv/MyBlog/public/js/scripts.js"></script> -->
+    <script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/huysblog/js/scripts.js"></script>
 
     <?php if ($highlight) {
         $this->load->view('site/import/syntaxhighlighterJS');

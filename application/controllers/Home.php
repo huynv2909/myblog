@@ -192,6 +192,11 @@
 			}
 		}
 
+		function love()
+		{
+			$this->load->view('site/love');
+		}
+
 		private function get_random_posts($id, $quantity, $field)
 		{
 			$this->load->model('Post_model');
