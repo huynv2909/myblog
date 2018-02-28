@@ -20,7 +20,7 @@
 
 	<div class="content">
 		<p id="begin">21-06-2017</p>
-		<p id="hvh"><span id="me">H</span>     <i class="far fa-heart fa-3x"></i> <span id="mine">H</span></p>
+		<p id="hvh"><span id="me">H</span>     <i class="far fa-heart fa-5x"></i> <span id="mine">H</span></p>
 		<p id="time"><span id="hour">12</span>:<span id="minute">31</span>:<span id="second">28</span> <span id="day">21</span>-<span id="month">02</span>-<span id="year">2018</span></p>
 		<p class="inlove">We're in love</p>
 		<p class="inlove"><span id="number">231</span> days.</p>
