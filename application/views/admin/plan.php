@@ -108,6 +108,7 @@
 			$.ajax({
 				url : url,
 				type : 'post',
+				dataType : 'json',
 				data : {
 					content : content
 				},
@@ -124,10 +125,8 @@
 						value: content
 					});
 
-					console.log(result[1]);
-
-					$(checkbox).data('url', result[0]);
-					$(checkbox).data('id', result[1]);
+					$(checkbox).data('url', result.url);
+					$(checkbox).data('id', result.id);
 
 					var span = document.createElement('span');
 					$(span).addClass('work-content');

@@ -4,8 +4,11 @@
 		function index()
 		{
 			$input = array(
-				'date' => date('Y-m-d')
+				'where' => array(
+					'date' => date('Y-m-d')
+					)
 				);
+			
 			$this->load->model('Plan_model');
 
 			$this->data['works'] = $this->Plan_model->get_list($input);
@@ -29,8 +32,10 @@
 					$this->load->model('Plan_model');
 					if ($this->Plan_model->create($new_work))
 					{
-						$ret = array(admin_url('plan/done'),$this->Plan_model->get_insert_id());
-						var_dump($ret);
+						$ret = array(
+							'url' => admin_url('plan/done'),
+							'id' => $this->Plan_model->get_insert_id());
+						die(json_encode($ret));
 						return false;
 					}
 				}
