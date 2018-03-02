@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>My love!</title>
     <link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/huysblog/css/love.css">
     <!-- Favicon -->
